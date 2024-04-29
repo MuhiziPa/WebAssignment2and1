@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="validation.js"></script>
+  </head>
+
+  <body>
+    <!-- Signup Section (Initially Open) -->
+    <section id="signupSection" class="form-section">
+      <div class="form-area">
+        <form onsubmit="return validateForm()">
+          <h2>Sign Up</h2>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit">Sign Up</button>
+          <div class="link-area">
+            <p>
+              Already have an account?
+              <a href="#" onclick="showSection('loginSection')">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="loginSection" class="form-section">
+      <div class="form-area">
+        <form action="" onsubmit="return validateForm()">
+          <h2>Login</h2>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" id="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" id="password" required />
+            <label>Password</label>
+          </div>
+          <div class="link-area">
+            <label><input type="checkbox" /> Remember me </label>
+            <a href="#" onclick="showSection('forgotPasswordSection')"
+              >Forgot Password?</a
+            >
+          </div>
+          <button type="submit">Login</button>
+          <div class="link-area">
+            <p>
+              Don't have an account?
+              <a href="#" onclick="showSection('signupSection')">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Forgot Password Section -->
+    <section
+      id="forgotPasswordSection"
+      class="form-section"
+      style="display: none"
+    >
+      <div class="form-area">
+        <form onsubmit="return validateForm()">
+          <h2>Forgot Password</h2>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="input-area">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input
+              type="password"
+              id="newPassword"
+              placeholder="New Password"
+              required
+            />
+          </div>
+          <button type="button" onclick="submitForm()">Reset Password</button>
+          <div class="link-area">
+            <p>
+              Received a verification code?
+              <a href="verify_code.html">Enter Code</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        showSection("signupSection");
+      });
+
+      function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll(".form-section").forEach((section) => {
+          section.style.display = "none";
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = "flex";
+      }
+    </script>
+  </body>
+</html>

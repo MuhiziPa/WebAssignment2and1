@@ -1,0 +1,97 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  overflow: hidden;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url("img.png");
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Common Styles for All Sections */
+.form-area {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: rgb(243, 220, 192);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1cm;
+  color: black;
+  text-align: center;
+}
+
+.input-area {
+  width: 300px;
+  margin: 30px;
+  border-bottom: 2px solid black;
+}
+
+.input-area input {
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.4cm;
+  color: black;
+}
+
+.input-area .icon {
+  position: absolute;
+  right: 55px;
+  line-height: 55px;
+}
+
+.button-area {
+  margin-top: 20px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background: rgba(63, 3, 3, 0.266);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.5cm;
+  font-weight: 700;
+}
+
+.link-area {
+  text-align: center;
+  font-size: 0.4cm;
+  margin: 25px 0 10px;
+}
+
+.link-area p a {
+  color: rgb(36, 20, 0);
+  font-weight: 700;
+}
